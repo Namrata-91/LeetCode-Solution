@@ -10,7 +10,9 @@ The final sorted array should not be returned by the function, but instead be st
 __Example 1:__
 
 __Input:__ nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+
 __Output:__ [1,2,2,3,5,6]
+
 __Explanation:__ The arrays we are merging are [1,2,3] and [2,5,6].
 
 The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
