@@ -1,0 +1,27 @@
+class Solution {
+    public int compress(char[] chars) {
+        int write=0;  // 'write' is the position where we will write the compressed characters
+        int i=0;      // 'i' is used to iterate through the original array
+
+        while(i<chars.length){   // Loop until we traverse the entire array
+        char currentChar = chars[i];
+        int count=0;
+
+        // Count how many times the current character repeats
+        while(i<chars.length && chars[i]==currentChar){
+            i++;
+            count++;
+        }
+        chars[write++] = currentChar;
+
+         // If the count is greater than 1, we need to append the count after the character
+         if(count>1){
+            // Convert the count to a string, then to a char array, and write each digit
+            for(char c: Integer.toString(count).toCharArray()){
+                chars[write++]=c;
+            }
+         }
+        }
+        return write;
+    }
+}
